@@ -1,3 +1,7 @@
+/*
+ * binary lifting
+ */
+
 #include <cstdio>
 #include <cstring>
 #include <iostream>
