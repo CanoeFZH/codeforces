@@ -75,10 +75,10 @@ int calc_segment(int l, int r) {
 
 void solve() {
     int ans = 1;
-    for(int k = 0; k < 2; k++) {
+    for(int j = 0; j < 2; j++) {
         current_array.clear();
-        for(int i = 0; 2 * i + k < n; i++) {
-            current_array.push_back(a[2 * i + k]);
+        for(int i = 0; 2 * i + j < n; i++) {
+            current_array.push_back(a[2 * i + j]);
         }
 
         int last = -1;
