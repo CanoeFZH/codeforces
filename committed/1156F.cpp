@@ -36,16 +36,16 @@ int n, a;
 int cnt[N], sum[N][N], dp[N][N];
 
 int main() {
-	cin >> n;
-	for (int i = 1; i <= n; i++) {
-		cin >> a;
-		cnt[a]++;
-	}
+    cin >> n;
+    for (int i = 1; i <= n; i++) {
+        cin >> a;
+        cnt[a]++;
+    }
 
-	for (int i = 0; i <= n; i++) {
-	    sum[0][i] = 1;	
-	}
-    
+    for (int i = 0; i <= n; i++) {
+        sum[0][i] = 1;	
+    }
+
     int answer = 0;
     for (int i = 1; i <= n; i++) {
         int inv = get_inv(n - i + 1);
@@ -59,6 +59,7 @@ int main() {
             sum[i][j] = add(sum[i][j - 1], dp[i][j]);             
         }
     }
+
     cout << answer<< endl;
-	return 0;
+    return 0;
 }
