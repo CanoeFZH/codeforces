@@ -23,7 +23,7 @@ int main() {
     sort(a + 1, a + n + 1);
     
     long long ans = 0;
-    for (int i = 0; i <= A / (k - 1); i++) {
+    for (int i = 1; i <= A / (k - 1); i++) {
         int last = 0;
         for (int j = 1; j <= n; j++) {
             while(last < j && a[j] - a[last + 1] >= i) {
