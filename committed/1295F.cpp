@@ -26,7 +26,7 @@ ll quick_mod(ll x, int y) {
 ll cnm(ll n, int m) {
     ll acc = 1;
     for(int i = 1; i <= m; i++) {
-        acc = acc * (n + m - i) * quick_mod(i, MOD - 2) % MOD;
+        acc = acc * (n + m - i) % MOD * quick_mod(i, MOD - 2) % MOD;
     }
     return acc;
 }
