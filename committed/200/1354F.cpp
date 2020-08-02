@@ -1,9 +1,9 @@
+#include <algorithm>
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
 #include <iostream>
 #include <vector>
-#include <algorithm>
 
 using namespace std;
 
@@ -41,7 +41,7 @@ void solve() {
     }
     return a.x.x < b.x.x;
   });
-  //forn(i, n) { printf("%d %d %d\n", a[i].x.x, a[i].x.y, a[i].y); }
+  // forn(i, n) { printf("%d %d %d\n", a[i].x.x, a[i].x.y, a[i].y); }
   forn(i, N) forn(j, N) dp[i][j] = -INF;
   dp[0][0] = 0;
   forn(i, n) forn(j, N) if (dp[i][j] >= 0) {
@@ -56,7 +56,7 @@ void solve() {
   }
 
   vector<int> ans[2];
-  //printf("n,k,dp[n][k]:%d,%d,%d\n", n, k, dp[n][k]);
+  // printf("n,k,dp[n][k]:%d,%d,%d\n", n, k, dp[n][k]);
   int current = k;
   for (int i = n; i > 0; i--) {
     if (p[i][current] == current) {
@@ -70,9 +70,7 @@ void solve() {
   reverse(ans[0].begin(), ans[0].end());
   reverse(ans[1].begin(), ans[1].end());
   printf("%d\n", (int)ans[0].size() + (int)ans[1].size() * 2);
-  forn(i, ans[0].size() - 1) {
-    printf("%d ", ans[0][i]);
-  }
+  forn(i, ans[0].size() - 1) { printf("%d ", ans[0][i]); }
   for (auto x : ans[1]) {
     printf("%d %d ", x, -x);
   }
